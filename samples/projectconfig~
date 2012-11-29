@@ -1,0 +1,9 @@
+[General]
+Cores = 1
+Threads = 2
+
+[Pipeline]
+FetchKind = Shared
+DispatchKind = Shared
+IssueKind = Shared
+CommitKind = Shared

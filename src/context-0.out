@@ -1,0 +1,5 @@
+number of arguments: 4
+	argv[0] = ../samples/test-args.x86
+	argv[1] = how
+	argv[2] = are
+	argv[3] = you
