@@ -148,6 +148,31 @@ static void x86_cpu_dispatch_core(int core)
     } while(quant && skip);
   
     break;
+
+  case x86_cpu_dispatch_kind_need_better_name:
+    X86_CORE.cur_dispatch_count=X86_CORE.cur_dispatch_count+x86_cpu_dispatch_num_slots_0;
+		do
+		{X86_CORE.dispatch_current = 0;
+		remain = x86_cpu_dispatch_thread(core, X86_CORE.dispatch_current, 1);	
+		quant = remain ? quant : quant - 1;
+		X86_CORE.cur_dispatch_count= remain ?X86_CORE.cur_dispatch_count:X86_CORE.cur_dispatch_count-1;		
+		}while (X86_CORE.cur_dispatch_count > 0 && !remain && quant);	
+		if(quant)		
+		do
+		{X86_CORE.dispatch_current = 1;
+		remain = x86_cpu_dispatch_thread(core, X86_CORE.dispatch_current, 1);	
+		quant = remain ? quant : quant - 1;		
+		}while (!remain && quant);
+		
+		if(quant)		
+		do
+		{X86_CORE.dispatch_current = 0;
+		remain = x86_cpu_dispatch_thread(core, X86_CORE.dispatch_current, 1);	
+		quant = remain ? quant : quant - 1;
+		X86_CORE.cur_dispatch_count= remain ?X86_CORE.cur_dispatch_count:X86_CORE.cur_dispatch_count-1;			
+		}while (!remain && quant);
+
+    break;
 	}
 }
 
