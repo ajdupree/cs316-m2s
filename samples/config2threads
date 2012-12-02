@@ -1,0 +1,12 @@
+[General]
+Cores = 1
+Threads = 2
+
+;SMT config
+[Pipeline]
+FetchKind = Shared
+DispatchKind = WeightedRoundRobin
+DispatchNumSlots0 = 3
+DispatchNumSlots1 = 1
+IssueKind = Shared
+CommitKind = Shared
