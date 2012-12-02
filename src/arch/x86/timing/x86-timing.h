@@ -89,8 +89,12 @@ extern enum x86_cpu_dispatch_kind_t
 {
 	x86_cpu_dispatch_kind_shared = 0,
 	x86_cpu_dispatch_kind_timeslice,
+  x86_cpu_dispatch_kind_weighted_round_robin,
+  x86_cpu_dispatch_kind_need_better_name
 } x86_cpu_dispatch_kind;
 extern int x86_cpu_dispatch_width;
+extern int x86_cpu_dispatch_num_slots_0;
+extern int x86_cpu_dispatch_num_slots_1;
 
 /* Issue stage */
 extern char *x86_cpu_issue_kind_map[];
@@ -719,6 +723,9 @@ struct x86_core_t
 	int dispatch_current;
 	int issue_current;
 	int commit_current;
+
+  /* Dispatch weighted round robin counters */
+  int cur_dispatch_count;
 
 	/* Stats */
 	long long dispatch_stall[x86_dispatch_stall_max];

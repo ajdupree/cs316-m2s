@@ -443,11 +443,11 @@ Copyright (C) 2010 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/ajdupree/CS316/multi2sim-4.0'
+ac_pwd='/home/tony/cs316/m2strunk'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
-AWK='gawk'
+AWK='mawk'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
 ac_need_defaults=:
@@ -658,8 +658,8 @@ S["HAVE_GTK_FALSE"]="#"
 S["HAVE_GTK_TRUE"]=""
 S["GTK_LIBS"]="-lgtk-3 -lgdk-3 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo-gobject -lpango-1.0 -lcairo -lgobject-2.0 -lglib-2.0  "
 S["GTK_CFLAGS"]="-pthread -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk"\
-"-pixbuf-2.0 -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/libpn"\
-"g12  "
+"-pixbuf-2.0 -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/lib"\
+"png12  "
 S["PKG_CONFIG"]="/usr/bin/pkg-config"
 S["LIBOBJS"]=""
 S["HAVE_GLUT_H_FALSE"]="#"
@@ -696,17 +696,17 @@ S["am__tar"]="$${TAR-tar} chof - \"$$tardir\""
 S["AMTAR"]="$${TAR-tar}"
 S["am__leading_dot"]="."
 S["SET_MAKE"]=""
-S["AWK"]="gawk"
+S["AWK"]="mawk"
 S["mkdir_p"]="/bin/mkdir -p"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]=""
-S["install_sh"]="${SHELL} /home/ajdupree/CS316/multi2sim-4.0/install-sh"
-S["MAKEINFO"]="${SHELL} /home/ajdupree/CS316/multi2sim-4.0/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/ajdupree/CS316/multi2sim-4.0/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /home/ajdupree/CS316/multi2sim-4.0/missing --run automake-1.11"
-S["AUTOCONF"]="${SHELL} /home/ajdupree/CS316/multi2sim-4.0/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /home/ajdupree/CS316/multi2sim-4.0/missing --run aclocal-1.11"
+S["install_sh"]="${SHELL} /home/tony/cs316/m2strunk/install-sh"
+S["MAKEINFO"]="${SHELL} /home/tony/cs316/m2strunk/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/tony/cs316/m2strunk/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /home/tony/cs316/m2strunk/missing --run automake-1.11"
+S["AUTOCONF"]="${SHELL} /home/tony/cs316/m2strunk/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /home/tony/cs316/m2strunk/missing --run aclocal-1.11"
 S["VERSION"]="4.0"
 S["PACKAGE"]="multi2sim"
 S["CYGPATH_W"]="echo"

@@ -234,9 +234,11 @@ enum x86_cpu_fetch_kind_t x86_cpu_fetch_kind;
 
 int x86_cpu_decode_width;
 
-char *x86_cpu_dispatch_kind_map[] = { "Shared", "TimeSlice" };
+char *x86_cpu_dispatch_kind_map[] = { "Shared", "TimeSlice" , "WeightedRoundRobin", "NeedBetterName"};
 enum x86_cpu_dispatch_kind_t x86_cpu_dispatch_kind;
 int x86_cpu_dispatch_width;
+int x86_cpu_dispatch_num_slots_0;
+int x86_cpu_dispatch_num_slots_1;
 
 char *x86_cpu_issue_kind_map[] = { "Shared", "TimeSlice" };
 enum x86_cpu_issue_kind_t x86_cpu_issue_kind;
@@ -305,8 +307,10 @@ static void x86_cpu_config_check(void)
 
 	x86_cpu_decode_width = config_read_int(config, section, "DecodeWidth", 4);
 
-	x86_cpu_dispatch_kind = config_read_enum(config, section, "DispatchKind", x86_cpu_dispatch_kind_timeslice, x86_cpu_dispatch_kind_map, 2);
+	x86_cpu_dispatch_kind = config_read_enum(config, section, "DispatchKind", x86_cpu_dispatch_kind_timeslice, x86_cpu_dispatch_kind_map, 4);
 	x86_cpu_dispatch_width = config_read_int(config, section, "DispatchWidth", 4);
+  x86_cpu_dispatch_num_slots_0 = config_read_int(config, section, "DispatchNumSlots0", 1);  
+  x86_cpu_dispatch_num_slots_1 = config_read_int(config, section, "DispatchNumSlots1", 1);  
 
 	x86_cpu_issue_kind = config_read_enum(config, section, "IssueKind", x86_cpu_issue_kind_timeslice, x86_cpu_issue_kind_map, 2);
 	x86_cpu_issue_width = config_read_int(config, section, "IssueWidth", 4);
@@ -315,6 +319,7 @@ static void x86_cpu_config_check(void)
 	x86_cpu_commit_width = config_read_int(config, section, "CommitWidth", 4);
 
 	x86_cpu_occupancy_stats = config_read_bool(config, section, "OccupancyStats", 0);
+
 
 
 	/* Section '[ Queues ]' */

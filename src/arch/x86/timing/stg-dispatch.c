@@ -136,6 +136,18 @@ static void x86_cpu_dispatch_core(int core)
 		} while (skip && x86_cpu_can_dispatch_thread(core, X86_CORE.dispatch_current) != x86_dispatch_stall_used);
 		x86_cpu_dispatch_thread(core, X86_CORE.dispatch_current, quant);
 		break;
+
+  case x86_cpu_dispatch_kind_weighted_round_robin:
+    do
+    { 
+      X86_CORE.cur_dispatch_count = (X86_CORE.cur_dispatch_count + 1) % (x86_cpu_dispatch_num_slots_0 + x86_cpu_dispatch_num_slots_1);
+      X86_CORE.dispatch_current = X86_CORE.cur_dispatch_count < x86_cpu_dispatch_num_slots_0 ? 0 : 1;
+			remain = x86_cpu_dispatch_thread(core, X86_CORE.dispatch_current, 1);
+			skip = remain ? skip - 1 : x86_cpu_num_threads;
+			quant = remain ? quant : quant - 1;
+    } while(quant && skip);
+  
+    break;
 	}
 }
 
