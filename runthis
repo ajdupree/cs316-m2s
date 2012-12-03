@@ -1,0 +1,1 @@
+../src/m2s --x86-config config2threads-2 --ctx-config spec-in-ctx --x86-report out.log --x86-max-inst 3000000 --x86-sim detailed --mem-config ./memconfig-eg4/mem-config

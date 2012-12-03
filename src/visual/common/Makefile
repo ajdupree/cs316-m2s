@@ -32,17 +32,17 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-am__append_1 = \
-	cycle-bar.c \
-	led.c \
-	list.c \
-	popup.c \
-	state.c \
-	trace.c \
-	visual.c
+#am__append_1 = \
+#	cycle-bar.c \
+#	led.c \
+#	list.c \
+#	popup.c \
+#	state.c \
+#	trace.c \
+#	visual.c
 
-#am__append_2 = \
-#	visual-nogtk.c
+am__append_2 = \
+	visual-nogtk.c
 
 subdir = src/visual/common
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
@@ -88,10 +88,10 @@ libcommon_a_AR = $(AR) $(ARFLAGS)
 libcommon_a_LIBADD =
 am__libcommon_a_SOURCES_DIST = visual-common.h cycle-bar.c led.c \
 	list.c popup.c state.c trace.c visual.c visual-nogtk.c
-am__objects_1 = cycle-bar.$(OBJEXT) led.$(OBJEXT) \
-	list.$(OBJEXT) popup.$(OBJEXT) state.$(OBJEXT) \
-	trace.$(OBJEXT) visual.$(OBJEXT)
-#am__objects_2 = visual-nogtk.$(OBJEXT)
+#am__objects_1 = cycle-bar.$(OBJEXT) led.$(OBJEXT) \
+#	list.$(OBJEXT) popup.$(OBJEXT) state.$(OBJEXT) \
+#	trace.$(OBJEXT) visual.$(OBJEXT)
+am__objects_2 = visual-nogtk.$(OBJEXT)
 am_libcommon_a_OBJECTS = $(am__objects_1) $(am__objects_2)
 libcommon_a_OBJECTS = $(am_libcommon_a_OBJECTS)
 DEFAULT_INCLUDES = -I.
@@ -107,12 +107,12 @@ DIST_SOURCES = $(am__libcommon_a_SOURCES_DIST)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/tony/cs316/m2strunk/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
-AUTOCONF = ${SHELL} /home/tony/cs316/m2strunk/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/tony/cs316/m2strunk/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/tony/cs316/m2strunk/missing --run automake-1.11
-AWK = mawk
+AUTOCONF = ${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run autoconf
+AUTOHEADER = ${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run autoheader
+AUTOMAKE = ${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run automake-1.11
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -msse2 -O3 -std=gnu99 -DNDEBUG
@@ -123,7 +123,7 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DATADIR = ${prefix}/share
-DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"multi2sim\" -DVERSION=\"4.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_WAIT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_FCNTL_H=1 -DHAVE_FLOAT_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STDINT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_SYS_IOCTL_H=1 -DHAVE_SYS_SOCKET_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_UNISTD_H=1 -DHAVE_UTIME_H=1 -DHAVE_ELF_H=1 -DHAVE_ZLIB_H=1 -DHAVE_LIBZ=1 -DHAVE_LIBGLUT=1 -DHAVE_LIBGL=1 -DHAVE_LIBGLU=1 -DHAVE_GLUT=1 -DHAVE_STRUCT_STAT_ST_BLKSIZE=1 -DHAVE_STRUCT_STAT_ST_BLOCKS=1 -DHAVE_ST_BLOCKS=1 -DHAVE_STRUCT_STAT_ST_RDEV=1 -DHAVE_UNISTD_H=1 -DHAVE_CHOWN=1 -DLSTAT_FOLLOWS_SLASHED_SYMLINK=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_PARAM_H=1 -DHAVE_GETPAGESIZE=1 -DHAVE_MMAP=1 -DHAVE_STDLIB_H=1 -DHAVE_REALLOC=1 -DHAVE_ALARM=1 -DHAVE_BZERO=1 -DHAVE_FTRUNCATE=1 -DHAVE_GETCWD=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_MEMSET=1 -DHAVE_MKDIR=1 -DHAVE_MUNMAP=1 -DHAVE_SELECT=1 -DHAVE_SOCKET=1 -DHAVE_STRCASECMP=1 -DHAVE_STRCHR=1 -DHAVE_STRDUP=1 -DHAVE_STRNCASECMP=1 -DHAVE_STRTOL=1 -DHAVE_UTIME=1 -DHAVE_LIBM=1 -DHAVE_LIBPTHREAD=1 -DHAVE_GTK=1
+DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"multi2sim\" -DVERSION=\"4.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_WAIT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_FCNTL_H=1 -DHAVE_FLOAT_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STDINT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_SYS_IOCTL_H=1 -DHAVE_SYS_SOCKET_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_UNISTD_H=1 -DHAVE_UTIME_H=1 -DHAVE_ELF_H=1 -DHAVE_ZLIB_H=1 -DHAVE_LIBZ=1 -DHAVE_LIBGLUT=1 -DHAVE_LIBGL=1 -DHAVE_LIBGLU=1 -DHAVE_GLUT=1 -DHAVE_STRUCT_STAT_ST_BLKSIZE=1 -DHAVE_STRUCT_STAT_ST_BLOCKS=1 -DHAVE_ST_BLOCKS=1 -DHAVE_STRUCT_STAT_ST_RDEV=1 -DHAVE_UNISTD_H=1 -DHAVE_CHOWN=1 -DLSTAT_FOLLOWS_SLASHED_SYMLINK=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_PARAM_H=1 -DHAVE_GETPAGESIZE=1 -DHAVE_MMAP=1 -DHAVE_STDLIB_H=1 -DHAVE_REALLOC=1 -DHAVE_ALARM=1 -DHAVE_BZERO=1 -DHAVE_FTRUNCATE=1 -DHAVE_GETCWD=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_MEMSET=1 -DHAVE_MKDIR=1 -DHAVE_MUNMAP=1 -DHAVE_SELECT=1 -DHAVE_SOCKET=1 -DHAVE_STRCASECMP=1 -DHAVE_STRCHR=1 -DHAVE_STRDUP=1 -DHAVE_STRNCASECMP=1 -DHAVE_STRTOL=1 -DHAVE_UTIME=1 -DHAVE_LIBM=1 -DHAVE_LIBPTHREAD=1
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -131,8 +131,8 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT = 
 GREP = /bin/grep
-GTK_CFLAGS = -pthread -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/libpng12  
-GTK_LIBS = -lgtk-3 -lgdk-3 -latk-1.0 -lgio-2.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo-gobject -lpango-1.0 -lcairo -lgobject-2.0 -lglib-2.0  
+GTK_CFLAGS = 
+GTK_LIBS = 
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -143,7 +143,7 @@ LIBOBJS =
 LIBS = -lpthread -lm -lGLU -lGL -lglut -lz 
 LTLIBOBJS = 
 M2S_INCLUDES =  -I$(top_srcdir)/src/lib/esim -I$(top_srcdir)/src/lib/mhandle -I$(top_srcdir)/src/lib/misc -I$(top_srcdir)/src/lib/struct -I$(top_srcdir)/src/arch/arm/asm -I$(top_srcdir)/src/arch/arm/emu -I$(top_srcdir)/src/arch/arm/timing -I$(top_srcdir)/src/arch/evergreen/asm -I$(top_srcdir)/src/arch/evergreen/emu -I$(top_srcdir)/src/arch/evergreen/timing -I$(top_srcdir)/src/arch/fermi/asm -I$(top_srcdir)/src/arch/fermi/emu -I$(top_srcdir)/src/arch/fermi/timing -I$(top_srcdir)/src/arch/southern-islands/asm -I$(top_srcdir)/src/arch/southern-islands/emu -I$(top_srcdir)/src/arch/southern-islands/timing -I$(top_srcdir)/src/arch/x86/asm -I$(top_srcdir)/src/arch/x86/emu -I$(top_srcdir)/src/arch/x86/timing -I$(top_srcdir)/src/visual/common -I$(top_srcdir)/src/visual/evergreen -I$(top_srcdir)/src/visual/memory -I$(top_srcdir)/src/visual/southern-islands -I$(top_srcdir)/src/visual/x86 -I$(top_srcdir)/src/mem-system -I$(top_srcdir)/src/network 
-MAKEINFO = ${SHELL} /home/tony/cs316/m2strunk/missing --run makeinfo
+MAKEINFO = ${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = multi2sim
@@ -158,13 +158,13 @@ PKGDATADIR = ${datarootdir}/multi2sim
 PKG_CONFIG = /usr/bin/pkg-config
 RANLIB = ranlib
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 STRIP = 
 VERSION = 4.0
-abs_builddir = /home/tony/cs316/m2strunk/src/visual/common
-abs_srcdir = /home/tony/cs316/m2strunk/src/visual/common
-abs_top_builddir = /home/tony/cs316/m2strunk
-abs_top_srcdir = /home/tony/cs316/m2strunk
+abs_builddir = /afs/ir/users/a/j/ajdupree/multi2sim/src/visual/common
+abs_srcdir = /afs/ir/users/a/j/ajdupree/multi2sim/src/visual/common
+abs_top_builddir = /afs/ir/users/a/j/ajdupree/multi2sim
+abs_top_srcdir = /afs/ir/users/a/j/ajdupree/multi2sim
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -184,7 +184,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/tony/cs316/m2strunk/install-sh
+install_sh = ${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -206,7 +206,7 @@ top_builddir = ../../..
 top_srcdir = ../../..
 lib_LIBRARIES = libcommon.a
 libcommon_a_SOURCES = visual-common.h $(am__append_1) $(am__append_2)
-AM_CFLAGS = -pthread -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/libpng12  
+#AM_CFLAGS = 
 INCLUDES =  -I$(top_srcdir)/src/lib/esim -I$(top_srcdir)/src/lib/mhandle -I$(top_srcdir)/src/lib/misc -I$(top_srcdir)/src/lib/struct -I$(top_srcdir)/src/arch/arm/asm -I$(top_srcdir)/src/arch/arm/emu -I$(top_srcdir)/src/arch/arm/timing -I$(top_srcdir)/src/arch/evergreen/asm -I$(top_srcdir)/src/arch/evergreen/emu -I$(top_srcdir)/src/arch/evergreen/timing -I$(top_srcdir)/src/arch/fermi/asm -I$(top_srcdir)/src/arch/fermi/emu -I$(top_srcdir)/src/arch/fermi/timing -I$(top_srcdir)/src/arch/southern-islands/asm -I$(top_srcdir)/src/arch/southern-islands/emu -I$(top_srcdir)/src/arch/southern-islands/timing -I$(top_srcdir)/src/arch/x86/asm -I$(top_srcdir)/src/arch/x86/emu -I$(top_srcdir)/src/arch/x86/timing -I$(top_srcdir)/src/visual/common -I$(top_srcdir)/src/visual/evergreen -I$(top_srcdir)/src/visual/memory -I$(top_srcdir)/src/visual/southern-islands -I$(top_srcdir)/src/visual/x86 -I$(top_srcdir)/src/mem-system -I$(top_srcdir)/src/network 
 all: all-am
 
