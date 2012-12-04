@@ -1,0 +1,5 @@
+[ Context 0  ]
+Exe = ../../spec2006-x86-bin/435.gromacs/gromacs_base.i386
+StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/435.gromacs/ref/gromacs.tpr
+StdOut = cfg-context-gromacs.out
+

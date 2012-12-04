@@ -1,0 +1,9 @@
+[ Context 0  ]
+Exe = ../../spec2006-x86-bin/456.hmmer/hmmer_base.i386
+StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/456.hmmer/ref/nph3.hmm
+StdOut = cfg-context-hmmer-hmmer-0.out
+
+[ Context 1 ]
+Exe = ../../spec2006-x86-bin/456.hmmer/hmmer_base.i386
+StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/456.hmmer/ref/retro.hmm
+Stdout = cfg-context-hmmer-hmmer-1.out
