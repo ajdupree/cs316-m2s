@@ -1,0 +1,11 @@
+[General]
+Cores = 1
+Threads = 1
+FastForward = 10000000
+
+;SMT config
+[Pipeline]
+FetchKind = Shared
+DispatchKind = Shared 
+IssueKind = Shared
+CommitKind = Shared

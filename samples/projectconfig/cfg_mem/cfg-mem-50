@@ -1,0 +1,100 @@
+; geometry of the L1, L2 caches
+
+[CacheGeometry geo-cpu-l1-0]
+Sets = 128
+Assoc = 8
+BlockSize = 256
+Latency = 4
+Policy = LRU
+Ports = 2
+
+[CacheGeometry geo-cpu-l1-1]
+Sets = 128
+Assoc = 8
+BlockSize = 256
+Latency = 4
+Policy = LRU
+Ports = 2
+
+[CacheGeometry geo-cpu-l2]
+Sets = 1024
+Assoc = 8
+BlockSize = 256
+Latency = 12
+Policy = LRU
+Ports = 4
+
+[CacheGeometry geo-cpu-l3]
+Sets = 32768
+Assoc = 8
+BlockSize = 256
+Latency = 36
+Policy = LRU
+Ports = 8
+
+; declare 2 l1 cpu caches, 1 l2, 1 l3
+
+[Module mod-cpu-l1-0]
+Type = Cache
+Geometry = geo-cpu-l1-0
+LowNetwork = net-cpu-l1-l2
+LowModules = mod-cpu-l2-0
+
+[Module mod-cpu-l1-1]
+Type = Cache
+Geometry = geo-cpu-l1-1
+LowNetwork = net-cpu-l1-l2
+LowModules = mod-cpu-l2-0
+
+[Module mod-cpu-l2-0]
+Type = Cache
+Geometry = geo-cpu-l2
+LowNetwork = net-cpu-l2-l3
+LowModules = mod-cpu-l3-0
+HighNetwork = net-cpu-l1-l2
+
+[Module mod-cpu-l3-0]
+Type = Cache
+Geometry = geo-cpu-l3
+LowNetwork = net-cpu-l3-mm
+LowModules = mod-cpu-mm
+HighNetwork = net-cpu-l2-l3
+
+; declare 1 main Memory banks
+
+[Module mod-cpu-mm]
+Type = MainMemory
+BlockSize = 256
+Latency = 100
+HighNetwork = net-cpu-l3-mm
+
+; Several networks between 4 levels of memory
+
+[Network net-cpu-l1-l2]
+DefaultInputBufferSize = 1024 
+DefaultOutputBufferSize = 1024
+DefaultBandwidth = 256 
+
+[Network net-cpu-l2-l3]
+DefaultInputBufferSize = 1024 
+DefaultOutputBufferSize = 1024
+DefaultBandwidth = 256 
+
+[Network net-cpu-l3-mm]
+DefaultInputBufferSize = 1024 
+DefaultOutputBufferSize = 1024
+DefaultBandwidth = 256 
+
+[Entry core-0]
+Type = CPU
+Core = 0
+Thread = 0
+DataModule = mod-cpu-l1-0
+InstModule = mod-cpu-l1-0
+
+[Entry core-1]
+Type = CPU
+Core = 0
+Thread = 1
+DataModule = mod-cpu-l1-1
+InstModule = mod-cpu-l1-1
