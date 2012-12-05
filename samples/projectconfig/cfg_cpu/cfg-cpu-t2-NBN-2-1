@@ -7,7 +7,7 @@ FastForward = 10000000
 [Pipeline]
 FetchKind = Shared
 DispatchKind = NeedBetterName
-DispatchNumSlots = 2
+DispatchNumSlots0 = 2
 DispatchNumSlots1 = 1
 IssueKind = Shared
 CommitKind = Shared

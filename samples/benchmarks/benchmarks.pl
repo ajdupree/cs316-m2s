@@ -1,6 +1,7 @@
 #!usr/bin/perl
 
-chomp($proj_home = `echo \$M2S_PROJ_HOME`);
+#chomp($proj_home = `echo \$M2S_PROJ_HOME`);
+$proj_home = '~/multi2sim/';
 $m2s = $proj_home . "src/m2s";
 $cfg_path = $proj_home . 'samples/projectconfig/';
 $cpu_path = $cfg_path . 'cfg_cpu';
