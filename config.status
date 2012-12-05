@@ -443,7 +443,7 @@ Copyright (C) 2010 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/afs/ir/users/a/j/ajdupree/multi2sim'
+ac_pwd='/afs/ir/users/v/i/vivoli/cs316/m2s'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -699,12 +699,12 @@ S["mkdir_p"]="/bin/mkdir -p"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]=""
-S["install_sh"]="${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/install-sh"
-S["MAKEINFO"]="${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run automake-1.11"
-S["AUTOCONF"]="${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /afs/ir/users/a/j/ajdupree/multi2sim/missing --run aclocal-1.11"
+S["install_sh"]="${SHELL} /afs/ir/users/v/i/vivoli/cs316/m2s/install-sh"
+S["MAKEINFO"]="${SHELL} /afs/ir/users/v/i/vivoli/cs316/m2s/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /afs/ir/users/v/i/vivoli/cs316/m2s/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /afs/ir/users/v/i/vivoli/cs316/m2s/missing --run automake-1.11"
+S["AUTOCONF"]="${SHELL} /afs/ir/users/v/i/vivoli/cs316/m2s/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /afs/ir/users/v/i/vivoli/cs316/m2s/missing --run aclocal-1.11"
 S["VERSION"]="4.0"
 S["PACKAGE"]="multi2sim"
 S["CYGPATH_W"]="echo"

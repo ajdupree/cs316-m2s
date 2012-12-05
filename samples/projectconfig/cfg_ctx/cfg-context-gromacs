@@ -1,5 +1,5 @@
 [ Context 0  ]
-Exe = /afs/ir.stanford.edu/users/a/j/ajdupree/multi2sim/spec2006-x86-bin/482.sphinx3/sphinx3_base.i386
+Exe = ../../spec2006-x86-bin/482.sphinx3/sphinx3_base.i386
 StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/482.sphinx3/ref/args.an4
 StdOut = cfg-context-gromacs.out
 

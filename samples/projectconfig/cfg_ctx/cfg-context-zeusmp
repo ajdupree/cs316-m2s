@@ -1,5 +1,5 @@
 [ Context 0  ]
-Exe = /afs/ir.stanford.edu/users/a/j/ajdupree/multi2sim/spec2006-x86-bin/434.zeusmp/zeusmp_base.i386
+Exe = ../../spec2006-x86-bin/434.zeusmp/zeusmp_base.i386
 StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/434.zeusmp/ref/zmp_inp
 StdOut = cfg-context-zeusmp.out
 
