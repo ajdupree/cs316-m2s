@@ -8,7 +8,8 @@ $cpu_path = $cfg_path . 'cfg_cpu';
 $mem_path = $cfg_path . 'cfg_mem';
 $ctx_path = $cfg_path . 'cfg_ctx';
 
-@tests = ("specrand","gromacs","hmmer","bzip2","gcc","bwaves"); 
+@tests = ("zeusmp","sphinx3","hmmer","bzip2","gcc","bwaves"); 
+#dude remember we said we were switching specrand to zeus? c'mon son. check skype.
 
 @configs = (
   {"cpu" => "cfg-cpu-t2-RR",      "mem" => "cfg-mem"}, 
@@ -18,11 +19,11 @@ $ctx_path = $cfg_path . 'cfg_ctx';
   {"cpu" => "cfg-cpu-t2-NBN-3",   "mem" => "cfg-mem"}, 
   {"cpu" => "cfg-cpu-t2-NBN-4",   "mem" => "cfg-mem"},
   {"cpu" => "cfg-cpu-t2-RR",      "mem" => "cfg-mem-50"}, 
-  {"cpu" => "cfg-cpu-t2-WRR-2", 	"mem" => "cfg-mem-66"}, 
-  {"cpu" => "cfg-cpu-t2-WRR-4", 	"mem" => "cfg-mem-80"}, 
+  {"cpu" => "cfg-cpu-t2-WRR-2", 	"mem" => "cfg-mem-50"}, 
+  {"cpu" => "cfg-cpu-t2-WRR-4", 	"mem" => "cfg-mem-50"}, 
   {"cpu" => "cfg-cpu-t2-NBN-2", 	"mem" => "cfg-mem-50"}, 
-  {"cpu" => "cfg-cpu-t2-NBN-3", 	"mem" => "cfg-mem-75"}, 
-  {"cpu" => "cfg-cpu-t2-NBN-4", 	"mem" => "cfg-mem-80"} 
+  {"cpu" => "cfg-cpu-t2-NBN-3", 	"mem" => "cfg-mem-50"}, 
+  {"cpu" => "cfg-cpu-t2-NBN-4", 	"mem" => "cfg-mem-50"} 
 ); 
   
 foreach $test (@tests)

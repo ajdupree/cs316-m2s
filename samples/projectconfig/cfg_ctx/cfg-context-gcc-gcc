@@ -1,10 +1,10 @@
 [ Context 0  ]
-Exe = ../../spec2006-x86-bin/403.gcc/gcc_base.i386
+Exe = /afs/ir.stanford.edu/users/a/j/ajdupree/multi2sim/spec2006-x86-bin/403.gcc/gcc_base.i386
 StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/403.gcc/ref/166.i
 StdOut = cfg-context-gcc-gcc-0.out
 
 [Context 1 ]
-Exe = ../../spec2006-x86-bin/403.gcc/gcc_base.i386
+Exe = /afs/ir.stanford.edu/users/a/j/ajdupree/multi2sim/spec2006-x86-bin/403.gcc/gcc_base.i386
 StdIn = /filer2/vol1/sanchezd/zsim-apps/inputs/speccpu2006/403.gcc/ref/200.i
 StdOut = cfg-context-gcc-gcc-1.out
 
